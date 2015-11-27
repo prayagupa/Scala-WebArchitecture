@@ -3,7 +3,7 @@ package com.authentication.controller
 import java.io.PrintWriter
 import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse}
 
-import com.com.authentication.service.LogonService
+import com.authentication.service.LogonService
 
 class LogonServlet extends HttpServlet {
 

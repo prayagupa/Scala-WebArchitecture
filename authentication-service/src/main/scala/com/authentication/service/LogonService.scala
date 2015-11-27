@@ -1,4 +1,4 @@
-package com.com.authentication.service
+package com.authentication.service
 
 /**
  * Created by prayagupd
