@@ -1,0 +1,42 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>home</servlet-name>
+        <servlet-class>com.pseudononymous.session.controller.ApplicationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>home</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>add</servlet-name>
+        <servlet-class>com.pseudononymous.session.controller.AddToDatabaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>add</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <!-- list -->
+    <servlet>
+        <servlet-name>list</servlet-name>
+        <servlet-class>com.pseudononymous.session.controller.ListDatabaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>list</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+
+    <!-- remove -->
+    <servlet>
+        <servlet-name>remove</servlet-name>
+        <servlet-class>com.pseudononymous.session.controller.RemoveDatabaseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>remove</servlet-name>
+        <url-pattern>/remove</url-pattern>
+    </servlet-mapping>
+
+</web-app>
