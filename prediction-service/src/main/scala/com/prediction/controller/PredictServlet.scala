@@ -1,6 +1,7 @@
 package com.prediction.controller
 
 import java.io.PrintWriter
+import javax.annotation.Resource
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse}
 
@@ -9,6 +10,7 @@ import com.prediction.service.PredictService
 @WebServlet(name="guess", urlPatterns = Array("/guess") )
 class PredictServlet extends HttpServlet {
 
+  //@Resource
   val predictService : PredictService = new PredictService
 
   @throws[Exception]
