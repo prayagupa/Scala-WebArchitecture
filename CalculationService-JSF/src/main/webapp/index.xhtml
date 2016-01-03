@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>calculation-service</title>
+</h:head>
+<h:body>
+    <h:form>
+        Input first number : <h:inputText value="#{calculationBean.value1}"/> <br/>
+        Input second number : <h:inputText value="#{calculationBean.value2}"/> <br/>
+        <h:commandButton value="Add" action="${calculationBean.add}" />
+    </h:form>
+    <br/>
+    Result : <h:outputText value="#{calculationBean.result}"/>
+</h:body>
+</html>

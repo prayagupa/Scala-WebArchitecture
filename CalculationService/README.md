@@ -1,13 +1,14 @@
 
 ```
+vagrant up
 vagrant ssh default
 mvn package
 
+cd /vagrant
 sudo service tomcat7 stop && 
 sudo rm -r /var/lib/tomcat7/webapps/calculation-service*
 
-sudo cp /vagrant/target/calculation-service.war /var/lib/tomcat7/webapps/ && 
-sudo service tomcat7 start
+sudo cp /vagrant/target/calculation-service.war /var/lib/tomcat7/webapps/ && sudo service tomcat7 start
 
 ```
 
