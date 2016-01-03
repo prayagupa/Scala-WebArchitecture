@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Flight service</title>
+</h:head>
+<h:body>
+    <h:form>
+        From :
+        <h:selectOneMenu value="#{flightBean.from}">
+            <f:selectItem itemValue="Kathmandu" itemLabel="Kathmandu" />
+            <f:selectItem itemValue="Fairfield" itemLabel="Fairfield" />
+            <f:selectItem itemValue="Columbus" itemLabel="Columbus" />
+        </h:selectOneMenu><br/>
+
+        To :
+        <h:selectOneMenu value="#{flightBean.to}">
+            <f:selectItem itemValue="Kathmandu" itemLabel="Kathmandu" />
+            <f:selectItem itemValue="Fairfield" itemLabel="Fairfield" />
+            <f:selectItem itemValue="Columbus" itemLabel="Columbus" />
+        </h:selectOneMenu>
+        <br/>
+        Departure date : <h:inputText value="#{flightBean.departureDate}"/> <br/>
+        Return date : <h:inputText value="#{flightBean.returnDate}"/> <br/>
+
+        Trip:
+        <h:selectOneRadio value="#{flightBean.tripType}">
+            <f:selectItem itemValue="Round" itemLabel="round" />
+            <f:selectItem itemValue="One way" itemLabel="oneWay" />
+        </h:selectOneRadio>
+        Options:
+        <h:selectManyCheckbox value="#{flightBean.options}">
+            <f:selectItem itemValue="First class" itemLabel="First class" />
+            <f:selectItem itemValue="Exact these days" itemLabel="Exact these days" />
+            <f:selectItem itemValue="No stopover" itemLabel="No stopover" />
+        </h:selectManyCheckbox>
+        <h:commandButton value="Book a ticket to mars" action="${flightBean.book}" />
+    </h:form>
+    <br/>
+    <h:outputText value="#{flightBean.result}"/>
+</h:body>
+</html>
