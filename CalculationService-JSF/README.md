@@ -8,10 +8,11 @@ run
 vagrant up
 vagrant ssh default 
 
+cd /vagrant
 sbt package
 target/scala-2.11/calculation-service_2.11-1.0.war
 
-sudo service tomcat7 stop && sudo rm -r /var/lib/tomcat7/webapps/jsf-*
+sudo service tomcat7 stop && sudo rm -r /var/lib/tomcat7/webapps/calculation-*
 
 sudo cp -r target/scala-2.11/calculation-service_2.11-1.0.war /var/lib/tomcat7/webapps/ && sudo service tomcat7 start
 
