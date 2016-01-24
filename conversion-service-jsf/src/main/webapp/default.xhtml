@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:body>
+
+		<h1>DMV - Department of Vehicle</h1>
+		
+		<h:form>
+		
+			<h:panelGrid columns="3">
+				Make :
+				<h:inputText id="make" value="#{driver.make}"
+					size="20" required="true" label="Make">
+				</h:inputText>
+				<h:message for="make" style="color:red" />
+			</h:panelGrid>
+
+			<h:panelGrid columns="3">
+				License number :
+				<h:inputText id="licenseNumber" value="#{driver.licenseNumber}"
+							 size="20" required="true" label="License number">
+					<f:converter converterId="com.pseudononymous.LicenseConverter" />
+				</h:inputText>
+				<h:message for="licenseNumber" style="color:red" />
+			</h:panelGrid>
+
+			<h:panelGrid columns="3">
+				Price :
+				<h:inputText id="price" value="#{driver.price}"
+							 size="20" required="true" label="Price">
+				</h:inputText>
+				<h:message for="price" style="color:red" />
+			</h:panelGrid>
+
+			<h:commandButton value="Submit" action="result" />
+			
+		</h:form>
+		
+    </h:body>
+</html>
