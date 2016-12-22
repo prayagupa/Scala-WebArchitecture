@@ -1,0 +1,31 @@
+{
+  "configuration": {
+    "name": "logggg",
+    "appenders": {
+      "RollingFile": {
+        "name": "rollingStone",
+        "fileName": "authentication.log",
+        "filePattern": "authentication%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "JSONLayout": {
+          "complete": false,
+          "compact" : true,
+          "eventEol" : true
+        },
+        "SizeBasedTriggeringPolicy": {
+          "size": "10 MB"
+        },
+        "DefaultRolloverStrategy": {
+          "max": "10"
+        }
+      }
+    },
+    "loggers": {
+      "root": {
+        "level": "debug",
+        "appender-ref": {
+          "ref": "rollingStone"
+        }
+      }
+    }
+  }
+}
